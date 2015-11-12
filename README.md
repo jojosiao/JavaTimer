@@ -1,5 +1,8 @@
 JavaTimer
 ==========
 
-JavaTimer is a Java CLI application that I created that I will use at work to create a file of logs of my time away from desk.
+JavaTimer used to be a Java CLI application.
+
+I added JavaTimerGUI class to use javax.swing.
+I created this to use at work to create a file of logs of my time away from desk.
 

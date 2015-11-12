@@ -1,3 +1,5 @@
+package javatimer;
+
 import java.io.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -108,14 +110,13 @@ public class JavaTimer
 		}
 	}
 
-	public void CheckLastFileTimeLog()
+	public void CheckLastFileTimeLog(String filelogpath)
 	{
 		
 	 	// let's read the file log.
-		String filelogpath = "C:\\vagrant\\Java\\JojoSiao\\JavaTimer\\FileLog";
+		
 		ArrayList<String> fileLog = new JavaTimer().ReadFileLog(filelogpath);
 
-		//System.out.println("fileLog size ="+fileLog.get(fileLog.size()-1));
 
 		SimpleDateFormat datetimelogformat = new SimpleDateFormat("MM-dd-yyyy");
 		SimpleDateFormat timeformat = new SimpleDateFormat("HH:mm:ss a");
@@ -192,7 +193,8 @@ public class JavaTimer
 		if(choice.equals(true))
 		{
 			// let's make a time log.
-			new JavaTimer().CheckLastFileTimeLog();
+			String filelogpath = "C:\\vagrant\\Java\\com\\JojoSiao\\JavaTimer\\FileLog";
+			new JavaTimer().CheckLastFileTimeLog(filelogpath);
 			System.out.println("New Time Punched today.");
 
 		}else 
